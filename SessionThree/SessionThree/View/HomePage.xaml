@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SessionThree.View.HomePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding InsuranceNumber, StringFormat='code is : {0}'} " ></Label>
+                <Label Text="{Binding FullName, StringFormat='hello! {0}'} " ></Label>
+                <Label Text="{Binding StartDate, StringFormat='start date is  {0}'} " ></Label>
+                <Label Text="{Binding EndDate, StringFormat='end date is! {0}'} " ></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="SearchDoctorsBtn" Text="search doctors" Clicked="SearchDoctorsBtn_Clicked"></Button>
+                <Button x:Name="SearchHospitalsBtn" Text="search hospitals" Clicked="SearchHospitalsBtn_Clicked"></Button>
+                <Button x:Name="SendInsuranceRequestBtn" Text="send insurance btn" Clicked="SendInsuranceRequestBtn_Clicked"></Button>
+                <Button x:Name="ViewNotificationsBtn" Text="view notifications" Clicked="ViewNotificationsBtn_Clicked"></Button>
+                <Button x:Name="ViewSettingsBtn" Text="settings" Clicked="ViewSettingsBtn_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

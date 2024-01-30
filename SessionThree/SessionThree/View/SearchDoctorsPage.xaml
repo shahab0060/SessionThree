@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SessionThree.View.SearchDoctorsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry Placeholder="type here to search for name or address or major!" x:Name="SearchInput" Keyboard="Text"
+                    TextChanged="SearchInput_TextChanged"></Entry>
+            <ListView x:Name="DoctorsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FullName, StringFormat='Dr : {0}'}"></Label>
+                                <Label Text="{Binding Major, StringFormat='with major of {0}'}"></Label>
+                                <Label Text="{Binding Address , StringFormat='located in {0}'}"></Label>
+                                <Button Text="Call him right now!" x:Name="CallDoctorBtn" Clicked="CallDoctorBtn_Clicked"></Button>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

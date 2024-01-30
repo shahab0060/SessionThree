@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SessionThree.View.SettingsPage">
+    <TabbedPage.Children>
+        <ContentPage Title="Change Password related information">
+            <StackLayout Orientation="Vertical">
+                <Entry Placeholder="please enter your current password" IsPassword="True" x:Name="CurrentPasswordInput"></Entry>
+                <Entry Placeholder="please enter your new password" IsPassword="True" x:Name="NewPasswordInput"></Entry>
+                <Entry Placeholder="please repeat your new password" IsPassword="True" x:Name="RepeatNewPasswordInput"></Entry>
+                <Button x:Name="ChangePasswordBtn" Clicked="ChangePasswordBtn_Clicked" Text="Save!"></Button>
+            </StackLayout>
+        </ContentPage>
+        <ContentPage Title="change other information">
+            <StackLayout Orientation="Vertical">
+                <Entry Placeholder="please enter your fullname" Keyboard="Text" x:Name="FullNameInput" Text="{Binding FullName}"></Entry>
+                <Entry Placeholder="please enter your email" Keyboard="Text" x:Name="EmailInput" Text="{Binding Email}"></Entry>
+                <Button x:Name="SaveGeneralInformationBtn" Text="Save!" Clicked="SaveGeneralInformationBtn_Clicked"></Button>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

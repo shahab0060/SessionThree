@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SessionThree.View.User.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry Placeholder="Email" Keyboard="Email" x:Name="EmailInput"></Entry>
+            <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordInput"></Entry>
+            <Entry Placeholder="Repeat Password" IsPassword="True" x:Name="RepeatPasswordInput"></Entry>
+            <Entry Placeholder="FullName"  x:Name="FullNameInput"></Entry>
+            <Label Text="accept terms and services"></Label>
+            <CheckBox x:Name="AccpetTermsCheckBox" IsChecked="false"></CheckBox>
+            <Button x:Name="RegisterBtn" Text="Register" Clicked="RegisterBtn_Clicked"></Button>
+            <Button x:Name="LoginBtn" Text="Login" Clicked="LoginBtn_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
